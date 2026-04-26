@@ -61,3 +61,30 @@ def insertion_sort(arr):
         array[current_index] = current_value
 
     return array
+
+#__________________________________________________Quick Sort_______________________________________________________________________
+def partition(arr , lo , hi):
+    pivot = arr[lo]
+    i=lo
+    j=hi-1
+    while i<=j:
+        if arr[i]>pivot and arr[j]<=pivot:
+            arr[i],arr[j] =arr[j],arr[i]
+            j-=1
+            i+=1
+        elif arr[i]>pivot:
+            j-=1
+        else:
+            i+=1
+    arr[j],arr[lo] = arr[lo],arr[j]
+    return j 
+
+def quick_sort(arr,lo,hi):
+    if lo<hi-1:
+        pivot_point=partition(arr,lo,hi)
+        quick_sort(arr,lo,pivot_point)
+        quick_sort(arr,pivot_point+1,hi)
+    else:
+        return arr
+    
+# ________________________________________________________________________________________________________________________________________

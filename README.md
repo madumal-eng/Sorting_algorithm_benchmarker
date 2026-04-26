@@ -11,7 +11,9 @@ using randomly generated arrays and visualizes their execution time.
 - Swap-based Selection Sort
 - Insertion Sort
 - Optimized Insertion Sort
+- Unoptimized quick Sort
 - Python Built-in Sort (Timsort)
+
 
 ## Features
 
